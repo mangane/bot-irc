@@ -17,13 +17,13 @@ module.exports = function (opts) {
   }
 
   var ircOpts = xtend({
-    channels: [opts.ircChannel],
-    autoConnect: false,
+    channels: [script-irc],
+    autoConnect: true,
     retryCount: 20
   }, opts.ircOpts)
 
   var ircClient = new irc.Client(
-    opts.ircServer || 'irc.freenode.net',
+    opts.ircServer || 'irc.europnet.org',
     opts.ircNick,
     ircOpts
   )
