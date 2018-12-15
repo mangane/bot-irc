@@ -110,4 +110,7 @@ module.exports = function (opts) {
       })
     })
   })
+j.user_join(function(message) {
+    message.say(message.user + ": Hey, welcome!");
+});
 }
